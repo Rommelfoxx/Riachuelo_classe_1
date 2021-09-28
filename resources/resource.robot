@@ -12,7 +12,7 @@ Dado que o navegador esta aberto
     Open Browser    url:    ${BROWSER}
 
 
-close browser
+fechar browser
     Close Browser
     
 

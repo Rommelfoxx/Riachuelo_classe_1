@@ -1,6 +1,7 @@
 *** Settings ***
 Resource           ../resources/resource.robot
 Resource           ../resources/page/home.robot
+Suite Teardown     fechar browser
 
 *** Test Cases ***
 #Historia 2567 
