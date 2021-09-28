@@ -3,13 +3,18 @@ Library    SeleniumLibrary
 
 
 *** Variables ***
-${URL}             http://automationpractice.com/index.php    
 ${BROWSER}         Chrome 
 
 
 *** Keywords ***
 
 Dado que o navegador esta aberto
-    Open Browser    ${URL}    ${BROWSER}
+    Open Browser    url:    ${BROWSER}
+
+
+close browser
+    Close Browser
+    
+
 
 

@@ -1,6 +1,6 @@
 *** Settings ***
-Resource     ../resources/Resource.robot
-
+Resource           ../resources/resource.robot
+Resource           ../resources/page/home.robot
 
 *** Test Cases ***
 #Historia 2567 
