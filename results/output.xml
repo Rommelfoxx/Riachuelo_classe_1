@@ -1,53 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210929 16:09:48.909" rpa="false" schemaversion="2">
-<suite id="s1" name="Test-Case" source="C:\Users\viviani\Desktop\Estudo\RobotFramework\Riachuelo_classe_1\test-case">
-<suite id="s1-s1" name="AbrirHome" source="C:\Users\viviani\Desktop\Estudo\RobotFramework\Riachuelo_classe_1\test-case\AbrirHome.robot">
-<test id="s1-s1-t1" name="Cenario 1 : Abrir tela home">
-<kw name="Dado que o navegador esta aberto" library="resource">
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210929 18:00:04.678" rpa="false" schemaversion="2">
+<suite id="s1" name="CadastrarUsuario" source="C:\Users\viviani\Desktop\Estudo\RobotFramework\Riachuelo_classe_1\test-case\CadastrarUsuario.robot">
+<kw name="que o navegador esta aberto" library="resource" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url:</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210929 16:09:57.488" level="INFO">Opening browser 'Chrome' to base url 'url:'.</msg>
-<status status="PASS" starttime="20210929 16:09:57.488" endtime="20210929 16:10:13.332"/>
+<msg timestamp="20210929 18:00:05.198" level="INFO">Opening browser 'Chrome' to base url 'url:'.</msg>
+<status status="PASS" starttime="20210929 18:00:05.197" endtime="20210929 18:00:37.473"/>
 </kw>
-<status status="PASS" starttime="20210929 16:09:57.487" endtime="20210929 16:10:13.332"/>
+<status status="PASS" starttime="20210929 18:00:05.196" endtime="20210929 18:00:37.473"/>
 </kw>
-<kw name="Quando acessa a pagina home" library="home">
+<test id="s1-t1" name="Cenario 1 - Abrir tela My Account com sucesso">
+<kw name="que eu estou na pagina home" library="home">
+<kw name="acessa a pagina home" library="home">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${HOME_URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210929 16:10:13.335" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
-<status status="PASS" starttime="20210929 16:10:13.334" endtime="20210929 16:10:22.607"/>
+<msg timestamp="20210929 18:00:37.481" level="INFO">Opening url 'http://automationpractice.com/index.php'</msg>
+<status status="PASS" starttime="20210929 18:00:37.480" endtime="20210929 18:00:49.904"/>
 </kw>
-<status status="PASS" starttime="20210929 16:10:13.333" endtime="20210929 16:10:22.607"/>
+<status status="PASS" starttime="20210929 18:00:37.479" endtime="20210929 18:00:49.905"/>
 </kw>
-<kw name="Então a pagina home é exibida" library="home">
+<kw name="a pagina home é exibida" library="home">
 <kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
 <arg>5</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" starttime="20210929 16:10:22.613" endtime="20210929 16:10:22.622"/>
+<status status="PASS" starttime="20210929 18:00:49.906" endtime="20210929 18:00:49.912"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>${HOME_TITLE}</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20210929 16:10:22.691" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20210929 16:10:22.622" endtime="20210929 16:10:22.692"/>
+<msg timestamp="20210929 18:00:49.938" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20210929 18:00:49.913" endtime="20210929 18:00:49.938"/>
 </kw>
-<status status="PASS" starttime="20210929 16:10:22.612" endtime="20210929 16:10:22.692"/>
+<status status="PASS" starttime="20210929 18:00:49.905" endtime="20210929 18:00:49.939"/>
 </kw>
-<status status="PASS" starttime="20210929 16:09:57.486" endtime="20210929 16:10:22.693"/>
+<status status="PASS" starttime="20210929 18:00:37.478" endtime="20210929 18:00:49.939"/>
+</kw>
+<kw name="acesso o sign in" library="home">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HOME_LINK_SIGININ}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210929 18:00:49.942" level="INFO">Clicking element 'xpath=//*[@title="Log in to your customer account"]'.</msg>
+<status status="PASS" starttime="20210929 18:00:49.941" endtime="20210929 18:00:52.572"/>
+</kw>
+<status status="PASS" starttime="20210929 18:00:49.940" endtime="20210929 18:00:52.572"/>
+</kw>
+<kw name="a página my account é exibida" library="signin">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${SIGNIN_CAMPO_CADASTRO}</arg>
+<arg>5</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210929 18:00:52.575" endtime="20210929 18:00:52.691"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${SIGNIN_CAMPO_CADASTRO}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210929 18:00:52.691" endtime="20210929 18:00:52.733"/>
+</kw>
+<status status="PASS" starttime="20210929 18:00:52.573" endtime="20210929 18:00:52.734"/>
+</kw>
+<status status="PASS" starttime="20210929 18:00:37.474" endtime="20210929 18:00:52.735"/>
 </test>
 <kw name="fechar browser" library="resource" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210929 16:10:22.699" endtime="20210929 16:10:26.984"/>
+<status status="PASS" starttime="20210929 18:00:52.739" endtime="20210929 18:00:58.349"/>
 </kw>
-<status status="PASS" starttime="20210929 16:10:22.699" endtime="20210929 16:10:26.985"/>
+<status status="PASS" starttime="20210929 18:00:52.738" endtime="20210929 18:00:58.350"/>
 </kw>
-<status status="PASS" starttime="20210929 16:09:49.209" endtime="20210929 16:10:26.985"/>
-</suite>
-<status status="PASS" starttime="20210929 16:09:48.915" endtime="20210929 16:10:26.991"/>
+<status status="PASS" starttime="20210929 18:00:04.682" endtime="20210929 18:00:58.350"/>
 </suite>
 <statistics>
 <total>
@@ -56,8 +79,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test-Case">Test-Case</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="AbrirHome">Test-Case.AbrirHome</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="CadastrarUsuario">CadastrarUsuario</stat>
 </suite>
 </statistics>
 <errors>

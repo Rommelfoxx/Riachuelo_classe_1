@@ -6,12 +6,21 @@ Library            SeleniumLibrary
 *** Variables ***
 ${HOME_URL}             http://automationpractice.com/index.php    
 ${HOME_TITLE}           My Store 
+${HOME_LINK_SIGININ}      xpath=//*[@title="Log in to your customer account"]
 
 
 *** Keywords ***
-Quando acessa a pagina home 
+acessa a pagina home 
     Go To    ${HOME_URL}
 
-Então a pagina home é exibida
+a pagina home é exibida
     Set Selenium Implicit Wait        5  
     Title Should Be                   ${HOME_TITLE} 
+
+que eu estou na pagina home
+    acessa a pagina home
+    a pagina home é exibida
+
+acesso o sign in
+    Click Element   ${HOME_LINK_SIGININ}
+
