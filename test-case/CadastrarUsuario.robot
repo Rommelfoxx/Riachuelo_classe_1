@@ -1,5 +1,7 @@
 *** Settings ***
-
+Resource           ../resources/resource.robot
+Resource           ../resources/page/home.robot
+Resource           ../resources/page/signin.robot
 Suite Setup        que o navegador esta aberto
 Suite Teardown     fechar browser
 

@@ -2,10 +2,11 @@
 Library            SeleniumLibrary
 
 
-
 *** Variables ***
 ${HOME_URL}             http://automationpractice.com/index.php    
 ${HOME_TITLE}           My Store 
+${HOME_LINK_SIGNIN}     xpath=//*[@title="Log in to your customer account"]
+
 
 
 *** Keywords ***
@@ -19,3 +20,7 @@ a pagina home é exibida
 que estou na pagina home
     acessa a pagina home
     a pagina home é exibida
+
+acesso o sign in 
+    Click Element    ${HOME_LINK_SIGNIN}
+
