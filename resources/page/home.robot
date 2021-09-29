@@ -9,9 +9,13 @@ ${HOME_TITLE}           My Store
 
 
 *** Keywords ***
-Quando acessa a pagina home 
+acessa a pagina home 
     Go To    ${HOME_URL}
 
-Então a pagina home é exibida
+a pagina home é exibida
     Set Selenium Implicit Wait        5  
     Title Should Be                   ${HOME_TITLE} 
+
+que estou na pagina home
+    acessa a pagina home
+    a pagina home é exibida

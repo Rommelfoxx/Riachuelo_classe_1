@@ -7,7 +7,10 @@ Suite Teardown     fechar browser
 #Historia 2567 
 
 Cenario 1 : Abrir tela home 
-    Dado que o navegador esta aberto 
-    Quando acessa a pagina home 
-    Então a pagina home é exibida 
+    #Dado 
+    que o navegador esta aberto 
+    #Quando 
+    acessa a pagina home 
+    #Então 
+    a pagina home é exibida 
 

@@ -7,10 +7,8 @@ ${BROWSER}         Chrome
 
 
 *** Keywords ***
-
-Dado que o navegador esta aberto
+que o navegador esta aberto
     Open Browser    url:    ${BROWSER}
-
 
 fechar browser
     Close Browser
