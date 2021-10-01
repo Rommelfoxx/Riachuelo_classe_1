@@ -21,6 +21,6 @@ que estou na pagina home
     acessa a pagina home
     a pagina home é exibida
 
-acesso o sign in 
+acesso o signin 
     Click Element    ${HOME_LINK_SIGNIN}
 

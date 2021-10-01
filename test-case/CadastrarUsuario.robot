@@ -12,6 +12,15 @@ Cenario 1 - Abrir tela de my account com sucesso
     #Dado 
     que estou na pagina home
     #Quando 
-    acesso o sign in 
+    acesso o signin 
     #Então 
-    a pagina my account é exibida 
+    a pagina signin é exibida 
+
+Cenario 2 - È informado email com formato incorreto
+
+    #Dado 
+    que estou na pagina signin 
+    #Quando 
+    informo e-mail "email%incorreto"
+    #Então 
+    sistema nao permite iniciar o cadastro  
