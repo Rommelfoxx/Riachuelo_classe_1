@@ -17,10 +17,10 @@ a pagina home é exibida
     Set Selenium Implicit Wait        5  
     Title Should Be                   ${HOME_TITLE} 
 
-que eu estou na pagina home
+que estou na pagina home
     acessa a pagina home
     a pagina home é exibida
 
-acesso o sign in
+acesso o signin
     Click Element   ${HOME_LINK_SIGININ}
 

@@ -10,19 +10,19 @@ Suite Teardown      fechar browser
 
 Cenario 1 - Abrir tela My Account com sucesso
     #Dado 
-    que eu estou na pagina home
+    que estou na pagina home
     #Quando 
-    acesso o sign in 
+    acesso o signin 
     #Então
-    a página my account é exibida
+    a pagina signin é exibida
 
 Cenario 2 - É informado email com formato incorreto
     #Dado
-    que eu estou na pagina signin
+    que estou na pagina signin 
     #Quando
     informo e-mail "email%incorreto"
     #Então
-    sistema não permite a iniciar o cadastro
+    sistema nao permite iniciar o cadastro
 
 
 

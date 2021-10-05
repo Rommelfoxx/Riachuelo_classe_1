@@ -10,19 +10,19 @@ ${SIGNIN_BUTTON_EMAIL}               id=SubmitCreate
 
 *** Keywords ***
 
-a página signin é exibida
-    Wait Until Element Is Enabled   ${SIGNIN_CAMPO_CADASTRO}    5
-    Element Should Be Enabled       ${SIGNIN_CAMPO_CADASTRO}
-
-que eu estou na pagina signin
+a pagina signin é exibida
+    Wait Until Element Is Enabled    ${SIGNIN_CAMPO_CADASTRO}    5
+    Element Should Be Enabled        ${SIGNIN_CAMPO_CADASTRO}  
+    
+que estou na pagina signin
     home.que estou na pagina home
-    home.acesso o signin
+    home.acesso o signin 
     signin.a pagina signin é exibida
 
 informo e-mail "${email}"
     Input Text  ${SIGNIN_CAMPO_EMAIL}    ${email}
     Click Element   ${SIGNIN_BUTTON_EMAIL}
 
-sistema não permite a iniciar o cadastro
-    Wait Until Element Is Visible       ${SIGNIN_ALERT_EMAIL}   10
-    Element Should Be Visible           ${SIGNIN_ALERT_EMAIL}
+sistema nao permite iniciar o cadastro
+    Wait Until Element Is Visible    ${SIGNIN_ALERT_EMAIL}    10
+    Element Should Be Visible      ${SIGNIN_ALERT_EMAIL} 
