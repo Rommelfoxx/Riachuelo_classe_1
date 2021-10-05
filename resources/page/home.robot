@@ -6,7 +6,7 @@ Library            SeleniumLibrary
 *** Variables ***
 ${HOME_URL}             http://automationpractice.com/index.php    
 ${HOME_TITLE}           My Store 
-${HOME_LINK_SIGININ}      xpath=//*[@title="Log in to your customer account"]
+${HOME_LINK_SIGININ}    xpath=//*[@title="Log in to your customer account"]
 
 
 *** Keywords ***
