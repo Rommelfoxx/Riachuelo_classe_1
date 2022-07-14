@@ -1,12 +1,15 @@
 on: [push]
 
 jobs:
-  run_automation:
-        runs-on: ubuntu-latest
-        steps:
-        - uses: actions/checkout@v1
-        - name: Execute tests
-          uses: tarathep/robotframework-github-action@v1.0
-          with:
-           tests_dir: '${{ github.workspace }}/test-case'
-           reports_dir: '${{ github.workspace }}/results'
+           
+   robot_test:
+    runs-on: ubuntu-latest
+    name: Run Robot Framework Tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Robot Framework
+        uses: joonvena/robotframework-docker-action@v1.0
+        with:
+           robot_tests_dir: '${{ github.workspace }}/test-case'
+           robot_reports_dir: '${{ github.workspace }}/results'
