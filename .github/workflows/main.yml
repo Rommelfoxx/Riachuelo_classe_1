@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  run_automation:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v1
+        - name: Execute tests
+          uses: tarathep/robotframework-github-action@v1.0
+          with:
+           tests_dir: '${{ github.workspace }}/test-case'
+           reports_dir: '${{ github.workspace }}/results'
