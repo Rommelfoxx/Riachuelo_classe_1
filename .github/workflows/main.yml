@@ -12,7 +12,3 @@ jobs:
         run: ls    
       - name: Robot Framework
         uses: joonvena/robotframework-docker-action@v1.0
-        env:
-            robot_tests_dir: /test-case
-            REPORT_PATH: ${{ github.workspace }}/reports
-            ROBOT_REPORTS_DIR: ${{ github.workspace }}/report
