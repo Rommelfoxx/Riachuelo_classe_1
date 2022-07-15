@@ -4,6 +4,7 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}         headlesschrome 
+${TESTE}
 
 
 *** Keywords ***
